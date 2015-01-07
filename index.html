@@ -46,6 +46,7 @@
   <body class="template">
     <div class="template-wrap clear">
     <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="100px" width="500px"></canvas>
+      <!-- <div class="fullscreen"><img src="Data/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div> -->
     </div>
     <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
     <script type='text/javascript'>
@@ -74,7 +75,7 @@
               logoimage: "Data/progresslogo.png",
               progressframeimage: "Data/loadingbar.png",
               progressbarimage: "Data/fullbar.png",
-              backgroundcolor: "000000",
+              backgroundcolor: "4D4D4D",
             });
           }
           if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
@@ -136,16 +137,4 @@ try {
 }
 </script>
   </body>
-
-  <script>
-  $(document).ready(function() {
-    $(document).bind('keydown',function(e){
-       if(e.keyCode == 70) {
-       SetFullscreen(1);
-       }
-    });
-});
-  </script>
-
 </html>
-
