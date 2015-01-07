@@ -33,7 +33,7 @@
     <script>
 	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 	var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-      var style = ".emscripten { padding-right: 0; width: " + w + "px; height: " + h + "; margin-left: auto; margin-right: auto; display: block; }";
+      var style = ".emscripten { padding-right: 0; width: " + w * .8 + "px; height: " + h * .8 + "; margin-left: auto; margin-right: auto; display: block; }";
       document.write("<style>" + style + "</style>");
     </script>
     <style>
@@ -49,7 +49,7 @@
   </head>
   <body class="template">
     <div class="template-wrap clear">
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="100px" width="500px"></canvas>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
       <!-- <div class="fullscreen"><img src="Data/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div> -->
     </div>
     <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
