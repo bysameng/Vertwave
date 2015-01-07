@@ -27,7 +27,9 @@
     -->
     </style>
     <script>
-      var style = ".emscripten { padding-right: 0; width: " + screen.width + "px; height: " + screen.height + "; background-color:black; margin-left: auto; margin-right: auto; display: block; }";
+	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+	var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+      var style = ".emscripten { padding-right: 0; width: " + w + "px; height: " + h + "; background-color:black; margin-left: auto; margin-right: auto; display: block; }";
       document.write("<style>" + style + "</style>");
     </script>
     <style>
