@@ -48,7 +48,7 @@ function CompatibilityCheck()
     })(navigator.userAgent||navigator.vendor||window.opera);
 
     // Check for WebGL. Allow running without WebGL on development players for running tests on build farm.
-    if (!0 && !hasWebGL)
+    if (!1 && !hasWebGL)
     {
         alert("You need a browser which supports WebGL to run this content. Try installing Firefox.");
         window.history.back();                
