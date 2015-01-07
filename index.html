@@ -46,7 +46,6 @@
   <body class="template">
     <div class="template-wrap clear">
     <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="100px" width="500px"></canvas>
-    <!-- <div class="fullscreen"><img src="Data/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div> -->
     </div>
     <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
     <script type='text/javascript'>
@@ -118,7 +117,14 @@ try {
     var moar = false; // we need to re-do, as x(x( will not be fixed
     asm = asm.replace(new RegExp('[^a-zA-Z0-9\\$\\_]' + minified + '\\(', 'g'), function(s) { moar = true; return s[0] + '(' });
   } while (moar);
-  code = code.substring(0, startAsm) + asm + code.substring(endAsm);
+  code = code.substring(0, startAsm$(document).ready(function() {
+    var mydiv = $('.mydiv');
+    $(document).bind('keydown',function(e){
+       if(e.keyCode == 88) {
+          mydiv.fadeIn();
+       }
+    });
+});) + asm + code.substring(endAsm);
   code = code.replace("'use asm'", "'almost asm'");
 } catch(e) { console.log('failed to optimize out Math.fround calls ' + e) }
  }
@@ -140,7 +146,6 @@ try {
 
   <script>
   $(document).ready(function() {
-    var mydiv = $('.mydiv');
     $(document).bind('keydown',function(e){
        if(e.keyCode == 70) {
        SetFullscreen(1);
