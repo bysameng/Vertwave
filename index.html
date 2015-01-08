@@ -12,6 +12,7 @@
       font-family: Helvetica, Verdana, Arial, sans-serif;
       text-align: center;
       background-color: black;
+      overflow:hidden;
     }
     a:link, a:visited {
       color: #000;
@@ -33,7 +34,7 @@
     <script>
 	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 	var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-      var style = ".emscripten { padding-right: 0; width: " + w * .8 + "px; height: " + h * .8 + "; margin-left: auto; margin-right: auto; display: block; }";
+      var style = ".emscripten { padding-right: 0; width: " + w + "px; height: " + h + "; margin-left: auto; margin-right: auto; display: block; }";
       document.write("<style>" + style + "</style>");
     </script>
     <style>
